@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 1 - Timing Attack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Part 1: Timing Attack</h1>
+      <p>
+        Enter a 4-digit PIN. The time taken will vary depending on how many
+        digits match the secret.
+      </p>
+
+      <input
+        type="text"
+        id="pin-input"
+        maxlength="4"
+        placeholder="1234"
+        autocomplete="off"
+      />
+      <button id="submit-btn">Submit</button>
+
+      <div id="spinner" class="spinner hidden"></div>
+
+      <p id="result"></p>
+      <p id="time"></p>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
