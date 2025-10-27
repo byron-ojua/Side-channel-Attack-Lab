@@ -1,0 +1,67 @@
+/* *************************** */
+/* *      Starter code       * */
+/* * Do not remove or modify * */
+/* *************************** */
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+main {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.led-container {
+  margin: 1rem auto;
+}
+
+.led {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: gray;
+  margin: auto;
+  transition: background 0.3s;
+}
+
+.led.green {
+  background: green;
+}
+
+.led.red {
+  background: red;
+}
+
+.pin-display {
+  font-size: 2rem;
+  margin: 1rem auto;
+  letter-spacing: 0.5rem;
+}
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.key {
+  padding: 1rem;
+  font-size: 1.25rem;
+  width: 60px;
+  cursor: pointer;
+}

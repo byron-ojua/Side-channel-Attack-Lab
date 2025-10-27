@@ -1,3 +1,8 @@
+// ******************************
+// *       Starter code         *
+// *   Do not remove or modify  *
+// ******************************
+
 import { checkPin } from "./part1.js";
 
 const input = document.getElementById("pin-input");

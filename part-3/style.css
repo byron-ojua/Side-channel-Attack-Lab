@@ -3,25 +3,27 @@
 /* * Do not remove or modify * */
 /* *************************** */
 
-.home {
-  max-width: 600px;
-  margin: auto;
-  padding: 3rem 1rem;
+body {
+  font-family: sans-serif;
   text-align: center;
-  background-color: #ffffff;
+  padding: 2rem;
+  background-color: #f8f8f8;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #444;
+main {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 .nav-links a {
@@ -38,4 +40,10 @@
 .nav-links a:hover {
   background-color: #007bff;
   color: white;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 2rem;
 }

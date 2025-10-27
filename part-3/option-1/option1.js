@@ -2,7 +2,7 @@
 // *   Side-Channel Attack Lab  *
 // *      Part 3 - Option 1     *
 // ******************************
-// Name:
+// Name: [Your Name]
 
 export function checkPin(pin, secret, delayFunction) {
   for (let i = 0; i < secret.length; i++) {
