@@ -65,3 +65,15 @@ main {
   width: 60px;
   cursor: pointer;
 }
+
+.no-js-banner {
+  background-color: #ffdddd;
+  color: #900;
+  border: 1px solid #e06666;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 1rem auto;
+  max-width: 600px;
+}
