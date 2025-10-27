@@ -3,8 +3,6 @@
 // *   Do not remove or modify  *
 // ******************************
 
-import { checkPin } from "./option1.js";
-
 const input = document.getElementById("pin-input");
 const result = document.getElementById("result");
 const time = document.getElementById("time");

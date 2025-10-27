@@ -3,8 +3,6 @@
 // *   Do not remove or modify  *
 // ******************************
 
-import { checkPin } from "./option2.js";
-
 const led = document.getElementById("led");
 const display = document.getElementById("display");
 const keys = document.querySelectorAll(".key");
