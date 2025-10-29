@@ -1,19 +1,16 @@
 // ******************************
 // *   Side-Channel Attack Lab  *
-// *      Part 3 - Option 2     *
+// *      Part 3 - Option 1     *
 // ******************************
 // Name: [Your Name]
 
-function checkPin(pin, secret, onFail, onSuccess) {
-  for (let i = 0; i < pin.length; i++) {
-    if (pin[i] !== secret[i]) {
-      // LED flashes red immediately when a wrong digit is detected
-      onFail();
-      return;
-    }
-  }
+function checkPin(pin, secret, delayFunction) {
+  for (let i = 0; i < secret.length; i++) {
+    if (pin[i] !== secret[i]) return false;
 
-  if (pin == secret) {
-    onSuccess();
+    // * DO NOT REMOVE OR MODIFY BELOW THIS LINE *
+    delayFunction();
+    // * DO NOT REMOVE OR MODIFY ABOVE THIS LINE *
   }
+  return true;
 }

@@ -4,13 +4,16 @@
 // ******************************
 // Name: [Your Name]
 
-function checkPin(pin, secret, delayFunction) {
-  for (let i = 0; i < secret.length; i++) {
-    if (pin[i] !== secret[i]) return false;
-
-    // * DO NOT REMOVE OR MODIFY BELOW THIS LINE *
-    delayFunction();
-    // * DO NOT REMOVE OR MODIFY ABOVE THIS LINE *
+function checkPin(pin, secret, onFail, onSuccess) {
+  for (let i = 0; i < pin.length; i++) {
+    if (pin[i] !== secret[i]) {
+      // LED flashes red immediately when a wrong digit is detected
+      onFail();
+      return;
+    }
   }
-  return true;
+
+  if (pin == secret) {
+    onSuccess();
+  }
 }

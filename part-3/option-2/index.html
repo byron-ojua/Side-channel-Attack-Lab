@@ -8,7 +8,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Part 2 - Visual LED Attack</title>
+    <title>Part 3 (Option 2) - Timing Attack</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,35 +19,22 @@
       </div>
     </noscript>
     <main>
-      <h1>Part 2: Optical (LED) Attack</h1>
-      <p>Use the keypad below to enter the 4-digit PIN.</p>
+      <h1>Part 3 (Option 2) - Timing Attack</h1>
+      <p>Enter your 4-digit PIN.</p>
 
-      <div class="led-container">
-        <div id="led" class="led"></div>
-      </div>
+      <input
+        type="text"
+        id="pin-input"
+        maxlength="4"
+        placeholder="1234"
+        autocomplete="off"
+      />
+      <button id="submit-btn">Submit</button>
 
-      <div id="display" class="pin-display">____</div>
+      <div id="spinner" class="spinner hidden"></div>
 
-      <div class="keypad">
-        <div class="row">
-          <button class="key">1</button>
-          <button class="key">2</button>
-          <button class="key">3</button>
-        </div>
-        <div class="row">
-          <button class="key">4</button>
-          <button class="key">5</button>
-          <button class="key">6</button>
-        </div>
-        <div class="row">
-          <button class="key">7</button>
-          <button class="key">8</button>
-          <button class="key">9</button>
-        </div>
-        <div class="row">
-          <button class="key">0</button>
-        </div>
-      </div>
+      <p id="result"></p>
+      <p id="time"></p>
     </main>
 
     <script src="./index.js"></script>

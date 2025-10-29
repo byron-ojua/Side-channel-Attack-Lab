@@ -3,12 +3,16 @@
 // *   Do not remove or modify  *
 // ******************************
 
-function checkPin(pin, secret, delayFunction) {
-  for (let i = 0; i < secret.length; i++) {
-    if (pin[i] !== secret[i]) return false;
-
-    // Introduce a delay to simulate timing leak
-    delayFunction();
+function checkPin(pin, secret, onFail, onSuccess) {
+  for (let i = 0; i < pin.length; i++) {
+    if (pin[i] !== secret[i]) {
+      // LED flashes red immediately when a wrong digit is detected
+      onFail();
+      return;
+    }
   }
-  return true;
+
+  if (pin == secret) {
+    onSuccess();
+  }
 }
