@@ -10,14 +10,14 @@ Welcome to the **Side-Channel Attack Lab**! In this interactive lab, you’ll ex
 
 ```
 .
-├── index.html                  # Home page (overview and links)
+├── index.html                 # Home page (overview and links)
 ├── style.css                  # Shared styles
-├── part-1/                    # Part 1: Timing Attack
+├── part-1/                    # Part 1: Optical (LED) Attack
 │   ├── index.html
 │   ├── index.js
 │   ├── part1.js
 │   └── style.css
-├── part-2/                    # Part 2: Optical (LED) Attack
+├── part-2/                    # Part 2: Timing Attack
 │   ├── index.html
 │   ├── index.js
 │   ├── part2.js
@@ -25,12 +25,12 @@ Welcome to the **Side-Channel Attack Lab**! In this interactive lab, you’ll ex
 ├── part-3/                    # Part 3: Patch the Vulnerabilities
 │   ├── index.html             # Select which option to patch
 │   ├── style.css
-│   ├── option-1/              # Option 1: Patch Timing Attack
+│   ├── option-1/              # Option 1: Patch Optical (LED) Attack
 │   │   ├── index.html
 │   │   ├── index.js
 │   │   ├── option1.js
 │   │   └── style.css
-│   └── option-2/              # Option 2: Patch LED Attack
+│   └── option-2/              # Option 2: Patch Timing Attack
 │       ├── index.html
 │       ├── index.js
 │       ├── option2.js
@@ -41,20 +41,19 @@ Welcome to the **Side-Channel Attack Lab**! In this interactive lab, you’ll ex
 
 ## 🧪 Lab Overview
 
-### 🔢 Part 1 – Timing Attack
-
-Explore how response time can leak a 4-digit PIN. Use timing data to infer how many digits are correct and guess the PIN.
-
-### 💡 Part 2 – Optical/LED Attack
+### 💡 Part 1 – Optical/LED Attack
 
 Watch a visual LED indicator to determine if a digit is correct. The LED flashes red on a wrong digit and short-circuits early—allowing side-channel exploitation.
+### 🔢 Part 2 – Timing Attack
+
+Explore how response time can leak a 4-digit PIN. Use timing data to infer how many digits are correct and guess the PIN.
 
 ### 🔐 Part 3 – Patch the Vulnerability
 
 Choose to patch either:
 
-- **Option 1**: Fix the timing vulnerability by removing early exits and using constant-time comparison.
-- **Option 2**: Fix the LED feedback vulnerability by removing short-circuit logic and evaluating the full PIN before giving feedback.
+- **Option 1**: Fix the LED feedback vulnerability by removing short-circuit logic and evaluating the full PIN before giving feedback.
+- **Option 2**: Fix the timing vulnerability by removing early exits and using constant-time comparison.
 
 > 💥 Bonus: Patch **both** options for extra credit!
 
@@ -88,6 +87,7 @@ Choose to patch either:
 
 ## 📋 Attribution
 
-Developed for CS499 – Intruduction to Computer Science Education
-
+Developed for CS499 – Introduction to Computer Science Education
 Oregon State University
+
+Parts of this lab were developed using Generative AI.
