@@ -8,9 +8,8 @@ function checkPin(pin, secret, delayFunction) {
   for (let i = 0; i < secret.length; i++) {
     if (pin[i] !== secret[i]) return false;
 
-    // * DO NOT REMOVE OR MODIFY BELOW THIS LINE *
+    // IMPORTANT: Every comparison you do must be followed by a delay
     delayFunction();
-    // * DO NOT REMOVE OR MODIFY ABOVE THIS LINE *
   }
   return true;
 }

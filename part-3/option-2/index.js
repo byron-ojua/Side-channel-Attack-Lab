@@ -31,6 +31,7 @@ function handleSubmit() {
   setTimeout(() => {
     const start = performance.now();
     const isValid = checkPin(pin, secret, mimicDelay); // Simulates leak
+    mimicDelay(); // Simulates time taken to process result
     const end = performance.now();
 
     spinner.classList.add("hidden");
