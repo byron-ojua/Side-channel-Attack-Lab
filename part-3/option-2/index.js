@@ -12,7 +12,10 @@ const secret = "4173";
 
 function mimicDelay() {
   const delayStart = performance.now();
-  while (performance.now() - delayStart < 200) {}
+  var randomDelay = Math.random() * 15; // Introduce randomness to mimic network jitter
+  var randomSign = Math.random() < 0.5 ? -1 : 1;
+  randomDelay = randomSign * randomDelay;
+  while (performance.now() - delayStart < 200 + randomDelay) {}
 }
 
 function handleSubmit() {
